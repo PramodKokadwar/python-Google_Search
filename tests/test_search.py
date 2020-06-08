@@ -4,6 +4,9 @@ from pages.result import GoogleResultPage
 from pages.search import GoogleSearchPage
 from selenium.webdriver import Chrome
 
+# Set up test case data
+word = 'dolphin'
+
 
 @pytest.fixture
 def browser():
@@ -21,9 +24,6 @@ def browser():
 
 
 def test_basic_search(browser):
-    # Set up test case data
-    word = 'dolphin'
-
     # Search for the word
     search_page = GoogleSearchPage(browser)
     search_page.load()
@@ -36,8 +36,3 @@ def test_basic_search(browser):
     # Verify that total link results appear
     result_page = GoogleResultPage(browser)
     assert result_page.link_div_count() > 0
-    assert result_page.word_result_count() > 0
-
-
-
-

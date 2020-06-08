@@ -4,7 +4,7 @@ from selenium.webdriver.common.keys import Keys
 
 class GoogleSearchPage:
     URL = 'https://www.google.com'
-    SEARCH_INPUT = (By.Name, 'q')
+    SEARCH_INPUT = (By.XPATH, "//input[@name='q']")
 
     def __init__(self, browser):
         self.browser = browser

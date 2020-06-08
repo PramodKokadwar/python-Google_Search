@@ -7,8 +7,8 @@ class GoogleResultPage:
 
     @classmethod
     def WORD_RESULTS(cls, word):
-        xpath = f"[//div[contains(text(),'{word}')]"
-        return By.XPATH, xpath
+        xpath = f"//div[contains(text(),{word})]"
+        return [(By.XPATH, xpath)]
 
     def __init__(self, browser):
         self.browser = browser
