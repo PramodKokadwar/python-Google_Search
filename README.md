@@ -9,10 +9,10 @@ This repository is meant for Realyr QA Automation Test.
 Project layout
 Project structure following lines:
 
-Config
-Tests
-Pages
-venv
+Config,
+Tests,
+Pages,
+venv,
 html report
 
 
